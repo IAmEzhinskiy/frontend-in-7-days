@@ -41,7 +41,11 @@ export default function FrontendIn7DaysLanding() {
         }
         throw new Error(body || `HTTP ${res.status}`);
       }
-      setStatus({ type: "ok", msg: "Thanks! Your request was received. We'll contact you shortly about payment, sending the guide, and scheduling the free 60-minute consultation." });
+      setStatus({
+        type: "ok",
+        msg:
+          "Thanks! Your request was received. We'll contact you shortly about payment, sending the guide, and scheduling the free 60-minute consultation."
+      });
       setEmail("");
     } catch (err: any) {
       setStatus({ type: "error", msg: err?.message || "Something went wrong. Please try again." });
@@ -79,12 +83,24 @@ export default function FrontendIn7DaysLanding() {
               <span className="text-5xl font-extrabold text-emerald-400" data-testid="price-new">$120</span>
             </div>
             <form onSubmit={handleSubmit} className="mt-10 flex flex-col sm:flex-row gap-4 bg-white/10 p-3 rounded-2xl backdrop-blur-lg border border-white/10" data-testid="lead-form">
-              <input type="email" required placeholder="Enter your email"
+              <input
+                type="email"
+                required
+                placeholder="Enter your email"
                 className="flex-1 bg-transparent border-none outline-none px-4 py-3 rounded-xl text-white placeholder:text-neutral-500"
-                value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email" data-testid="email-input" />
-              <button type="submit" disabled={loading}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                aria-label="Email"
+                data-testid="email-input"
+              />
+              <button
+                type="submit"
+                disabled={loading}
                 className="px-6 py-3 bg-gradient-to-r from-blue-500 to-emerald-400 text-black font-bold rounded-xl shadow-lg hover:opacity-90 disabled:opacity-50 transition"
-                data-testid="submit-btn">{loading ? "Sending..." : "Get the Guide"}</button>
+                data-testid="submit-btn"
+              >
+                {loading ? "Sending..." : "Get the Guide"}
+              </button>
             </form>
             {status.type === "ok" && <p className="mt-3 text-emerald-400 text-sm" data-testid="status-ok">{status.msg}</p>}
             {status.type === "error" && <p className="mt-3 text-red-400 text-sm" data-testid="status-error">{status.msg}</p>}
