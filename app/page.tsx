@@ -134,7 +134,17 @@ export default function FrontendIn7DaysLanding() {
           {["How do I pay?","What is the format?","When is the consultation?","Refund policy?"].map((q, i) => (
             <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <div className="font-semibold">{q}</div>
-              <div className="mt-2 text-sm text-neutral-300">Answer about {q} goes here.</div>
+              <div className="mt-2 text-sm text-neutral-300">
+                {q === "How do I pay?"
+                  ? "I accept payment in USD or USDT. After you submit your request, we’ll choose the most convenient payment method and I’ll send a secure payment link."
+                  : q === "What is the format?"
+                  ? "A 7-day, practical roadmap with daily tasks, explanations, and code examples. It’s a digital guide (readable on desktop & mobile) with links to tools and resources."
+                  : q === "When is the consultation?"
+                  ? "If, after reviewing the guide, you still have questions, we’ll schedule a call to discuss them. One 60-minute 1:1 consultation is included. If you need more time or additional sessions, we’ll agree on a separate fee."
+                  : q === "Refund policy?"
+                  ? "I can send the first chapter for free before purchase so you can preview the material. After payment is received and the guide is delivered, all sales are final and refunds are not available."
+                  : ""}
+              </div>
             </div>
           ))}
         </div>
