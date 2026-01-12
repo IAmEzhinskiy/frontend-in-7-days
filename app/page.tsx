@@ -80,7 +80,7 @@ export default function FrontendIn7DaysLanding() {
             </p>
             <div className="mt-8 flex items-baseline gap-4" aria-label="pricing">
               <span className="text-2xl line-through text-neutral-500" data-testid="price-old">$250</span>
-              <span className="text-5xl font-extrabold text-emerald-400" data-testid="price-new">$120</span>
+              <span className="text-5xl font-extrabold text-emerald-400" data-testid="price-new">$140</span>
             </div>
             <form onSubmit={handleSubmit} className="mt-10 flex flex-col sm:flex-row gap-4 bg-white/10 p-3 rounded-2xl backdrop-blur-lg border border-white/10" data-testid="lead-form">
               <input
