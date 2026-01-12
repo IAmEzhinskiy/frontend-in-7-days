@@ -33,7 +33,7 @@ export async function POST(req: Request) {
         subject: "Your Frontend in 7 Days request was received",
         text:
           `Thanks for your interest!\n\n` +
-          `We received your request for the Frontend in 7 Days guide ($120 — launch discount from $250). ` +
+          `We received your request for the Frontend in 7 Days guide ($140 — launch discount from $250). ` +
           `We will contact you shortly to arrange payment, send the guide, and schedule your free 60-minute consultation if you would like.\n\n` +
           `If you have any questions, just reply to this email.`
       });
